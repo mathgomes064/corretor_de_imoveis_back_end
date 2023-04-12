@@ -1,6 +1,7 @@
 import { DataSource } from "typeorm"
 import { User } from "./entities/user.entity";
 import { error } from "console";
+import { Imovel } from "./entities/imovel.entity";
 
 require("dotenv").config();
 
@@ -15,6 +16,6 @@ export const AppDataSource = new DataSource({
 
     synchronize: false,
     logging: true,
-    entities: [User],
+    entities: [User, Imovel],
     migrations: ["src/migrations/*.ts"],
 })
