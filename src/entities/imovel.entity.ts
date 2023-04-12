@@ -1,34 +1,37 @@
 import {Entity, Column, PrimaryColumn, OneToOne, JoinColumn, OneToMany, ManyToOne} from "typeorm"
 import { v4 as uuid } from "uuid"
-import { Imovel } from "./imovel.entity"
+import { User } from "./user.entity"
 
-//lado one
+//lado many
 
-@Entity("user")
-export class User{
+@Entity("imovel")
+export class Imovel{
     @PrimaryColumn("uuid")
     readonly id: string
+
+    @Column()
+    status: boolean
+
+    @Column()
+    image: string
 
     @Column()
     name: string
 
     @Column()
-    email: string
+    description: string
 
     @Column()
-    senha: string
+    valor_compra: number
 
     @Column()
-    contato: string
+    valor_venda: number
 
     @Column()
     created_at: Date
 
-    @OneToMany((type) => Imovel, imovel => imovel.user, {
-        eager: true,
-        onDelete: "CASCADE"
-    })
-    imoveis: Imovel[] 
+    @ManyToOne((type) => User, user => user.imoveis)
+    user: User
 
     constructor(){
         if(!this.id){

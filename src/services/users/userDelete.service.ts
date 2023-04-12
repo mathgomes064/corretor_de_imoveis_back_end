@@ -12,6 +12,5 @@ export const userDeleteService = async(id: string) =>{
     }
 
     await userRepository.delete({id})
-
   
 }
