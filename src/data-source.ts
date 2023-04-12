@@ -18,11 +18,3 @@ export const AppDataSource = new DataSource({
     entities: [User],
     migrations: ["src/migrations/*.ts"],
 })
-
-AppDataSource.initialize()
-.then(() =>{
-    console.log("Data Source initialized :)")
-})
-.catch((error) =>{
-    console.error("Error during Data Source Initialization", error)
-})
