@@ -10,7 +10,7 @@ export class Imovel{
     readonly id: string
 
     @Column()
-    status: boolean
+    status: string
 
     @Column()
     image: string
@@ -30,7 +30,9 @@ export class Imovel{
     @Column()
     created_at: Date
 
-    @ManyToOne((type) => User, user => user.imoveis)
+    @ManyToOne((type) => User, user => user.imoveis, {
+        onDelete: "CASCADE"
+    })
     user: User
 
     constructor(){

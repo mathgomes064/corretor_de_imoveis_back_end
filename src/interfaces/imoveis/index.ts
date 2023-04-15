@@ -1,5 +1,5 @@
 export interface IImovelCreate{
-    status: boolean;
+    status: string;
     image: string;
     name: string;
     description: string;
@@ -10,7 +10,7 @@ export interface IImovelCreate{
 }
 
 export interface IImovelUpdate{
-    status?: boolean;
+    status?: string;
     name?: string;
     description?: string;
     valor_compra?: number;
