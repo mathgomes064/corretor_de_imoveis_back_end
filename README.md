@@ -39,7 +39,6 @@ ulr base da Api = https://corretor-de-imoveis.onrender.com
 
 ```json
 {
-	{
 	"id": "295ea24b-b8b8-4af5-b69b-6441a54e0f56",
 	"name": "Matheus Alves",
 	"email": "matheus@hotmail.com",
