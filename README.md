@@ -57,7 +57,8 @@ ulr base da Api = https://corretor-de-imoveis.onrender.com
 			"valor_venda": 50000,
 			"created_at": "2023-04-17T19:11:11.319Z"
 		},
-	}
+	],
+	
 }
 ```
 
