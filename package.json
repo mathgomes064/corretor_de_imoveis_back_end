@@ -5,11 +5,10 @@
   "repository": "git@github.com:mathgomes064/corretor_de_imoveis_back_end.git",
   "author": "Matheus_Gomes <mathgomes007@htomail.com>",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "dev": "ts-node-dev --ignore-watch node_modules src/server.ts",
     "typeorm": "typeorm-ts-node-commonjs",
-    "migrations:prod": "typeorm-ts-node-commonjs migration:run -d dist/data-source",
+    "migrations:prod": "yarn typeorm migration:run -d dist/data-source",
     "build": "tsc",
     "start": "node dist/server.js"
   },
