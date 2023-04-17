@@ -2,8 +2,7 @@ import { DataSource } from "typeorm"
 import { User } from "./entities/user.entity";
 import { error } from "console";
 import { Imovel } from "./entities/imovel.entity";
-
-require("dotenv").config();
+import "dotenv/config"
 
 export const AppDataSource = new DataSource({
     type: "postgres",
