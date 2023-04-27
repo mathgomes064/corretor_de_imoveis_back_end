@@ -35,6 +35,14 @@ ulr base da Api = https://corretor-de-imoveis.onrender.com
 }
 ```
 
+`POST /login - FORMATO DA RESPOSTA - STATUS 200`
+
+```json
+{
+	"token": "token da requisição"
+}
+```
+
 `GET /user/me - FORMATO DA RESPOSTA - STATUS 200`
 
 ```json
